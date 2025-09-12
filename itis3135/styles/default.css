@@ -24,3 +24,11 @@ main {
 h2{
     text-align: center;
 }
+
+img{
+    width: 60%;
+}
+figure{
+    text-align: center;
+    font-style: italic;
+}
