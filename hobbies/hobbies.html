@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marc Kowae's Hobby Hub || Playing Video Games</title>
+  <style>
+    /* === Embedded Styles === */
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background: linear-gradient(to bottom right, #2d2a4a, #5a5470);
+      color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header, footer {
+      background-color: #3c366b;
+      color: #fefefe;
+      padding: 1.5em 0;
+    }
+
+    header h1 {
+      margin: 0.3em 0;
+      font-size: 2em;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      margin-top: 0.5em;
+    }
+
+    nav a {
+      color: #f7d794;
+      text-decoration: none;
+      margin: 0 0.4em;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #feca57;
+      text-shadow: 0 0 4px #fff;
+    }
+
+    main {
+      padding: 2em;
+    }
+
+    section {
+      display: none;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    section.active {
+      display: block;
+      animation: fadeIn 0.7s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      border-bottom: 2px solid #feca57;
+      padding-bottom: 0.4em;
+      color: #ffeaa7;
+    }
+
+    figure {
+      text-align: center;
+      margin: 1.5em 0;
+    }
+
+    figure img {
+      max-width: 80%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    figcaption {
+      font-style: italic;
+      margin-top: 0.5em;
+    }
+
+    footer nav {
+      margin-bottom: 1em;
+    }
+
+    footer a {
+      color: #ffeaa7;
+      text-decoration: none;
+      margin: 0 0.3em;
+    }
+
+    footer a:hover {
+      color: #feca57;
+    }
+
+    .divider {
+      color: #ffb142;
+      font-weight: bold;
+      margin: 0 0.3em;
+    }
+
+    .validators img {
+      width: 90px;
+      margin: 0.4em;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #4b4377;
+      margin: 1.5em 0;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 0.8em;
+      border-bottom: 1px solid #6b5cae;
+      text-align: left;
+    }
+
+    th {
+      background-color: #5e54a4;
+      color: #ffeaa7;
+    }
+  </style>
+  <script>
+    // === Simple section-switching JS ===
+    function showSection(id) {
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+
+    window.onload = () => showSection('what');
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Marc Kowae’s Gaming Realm 🎮</h1>
+    <nav>
+      <a href="#" onclick="showSection('what')">What</a> ✦
+      <a href="#" onclick="showSection('who')">Who</a> ✦
+      <a href="#" onclick="showSection('when')">When</a> ✦
+      <a href="#" onclick="showSection('where')">Where</a> ✦
+      <a href="#" onclick="showSection('how')">How</a> ✦
+      <a href="#" onclick="showSection('why')">Why</a> ✦
+      <a href="#" onclick="showSection('ai')">AI Prompts</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- === WHAT SECTION (default visible) === -->
+    <section id="what" class="active">
+      <h2>What: Playing Video Games</h2>
+      <p>Playing video games is more than just a hobby — it’s an experience of art, challenge, and connection. Games like <strong>Hollow Knight</strong>, <strong>Celeste</strong>, and the upcoming <strong>Silksong</strong> offer immersive worlds and emotional storytelling that rival books or films.</p>
+      <p>My hobby revolves around exploring the depth of indie games, appreciating their music, world-building, and hand-drawn art.</p>
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/en/3/32/Hollow_Knight_cover.jpg" alt="Hollow Knight cover art">
+        <figcaption>Exploring the vast, haunting world of Hallownest in <em>Hollow Knight</em>.</figcaption>
+        <p><em>AI Prompt used (for stylized background): "Create a hand-drawn game poster inspired by Hollow Knight with glowing caverns."</em></p>
+      </figure>
+    </section>
+
+    <!-- === WHO SECTION === -->
+    <section id="who">
+      <h2>Who: About Me</h2>
+      <p>Hi, I’m Marc, a lifelong gamer who grew up fascinated by pixel art, storytelling, and music in games. My first real challenge was in *Celeste* — where climbing the mountain became a metaphor for perseverance.</p>
+      <p>Today, I share my passion by analyzing game design, experimenting with mods, and keeping up with indie developers like Team Cherry.</p>
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/en/9/9c/Celeste_box_art_final.png" alt="Celeste cover art">
+        <figcaption>Madeline’s journey in <em>Celeste</em> represents determination and self-discovery.</figcaption>
+        <p><em>AI Prompt used: "Generate an illustration of a climber ascending a mystical mountain under pixel-art stars."</em></p>
+      </figure>
+    </section>
+
+    <!-- === WHEN SECTION === -->
+    <section id="when">
+      <h2>When: The Best Times to Play</h2>
+      <p>I usually play during the evenings or weekends — when I can relax without distractions. Certain games feel better depending on the season:</p>
+      <table>
+        <tr><th>Season</th><th>Game</th><th>Reason</th></tr>
+        <tr><td>Winter</td><td>Hollow Knight</td><td>The dark, quiet atmosphere fits cold nights.</td></tr>
+        <tr><td>Spring</td><td>Celeste</td><td>Fresh energy for a mountain climb.</td></tr>
+        <tr><td>Summer</td><td>Stardew Valley</td><td>Wholesome farming and sunny days.</td></tr>
+        <tr><td>Fall</td><td>Silksong (hopefully!)</td><td>Perfect time for exploring something new.</td></tr>
+      </table>
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/en/2/2a/Stardew_Valley_cover_art.png" alt="Stardew Valley art">
+        <figcaption>A cozy farming life in <em>Stardew Valley</em>.</figcaption>
+        <p><em>AI Prompt used: "Draw a cozy autumn farm scene inspired by Stardew Valley."</em></p>
+      </figure>
+    </section>
+
+    <!-- === WHERE SECTION === -->
+    <section id="where">
+      <h2>Where: The Best Places to Play</h2>
+      <p>Gaming is best enjoyed wherever you feel most comfortable — for me, that’s at my desk setup with ambient lighting and a cup of tea.</p>
+      <p>Sometimes, I bring my handheld console outdoors to play in nature, especially slower games like *Spiritfarer* or *Animal Crossing*.</p>
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/en/5/5e/Animal_Crossing_New_Horizons.jpg" alt="Animal Crossing cover">
+        <figcaption>Relaxing island life in <em>Animal Crossing: New Horizons</em>.</figcaption>
+        <p><em>AI Prompt used: "Illustrate a peaceful outdoor gaming setup under soft lighting."</em></p>
+      </figure>
+    </section>
+
+    <!-- === HOW SECTION === -->
+    <section id="how">
+      <h2>How: Getting Started</h2>
+      <p>Start small — pick a game that speaks to you. Whether it’s a platformer like *Celeste* or a Metroidvania like *Hollow Knight*, what matters most is finding what inspires you to keep playing.</p>
+      <p>All you need is a device (PC, console, or even a phone), a bit of patience, and curiosity!</p>
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/en/f/f4/Hollow_Knight_Silksong.jpg" alt="Silksong art">
+        <figcaption>The highly anticipated <em>Silksong</em> will build upon *Hollow Knight’s* beautiful foundations.</figcaption>
+        <p><em>AI Prompt used: "Design a glowing, bug-themed fantasy setting inspired by Silksong."</em></p>
+      </figure>
+    </section>
+
+    <!-- === WHY SECTION === -->
+    <section id="why">
+      <h2>Why: Why I Love Gaming</h2>
+      <p>Gaming gives me an escape, but also a challenge. It teaches patience, strategy, and creativity. The music, art, and stories make me feel part of something bigger than myself.</p>
+      <p>It’s also a way to connect — with friends, communities, and even developers. The joy of overcoming a tough boss or finishing a speedrun is unmatched.</p>
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/en/d/d4/Hollow_Knight_Boss_Fight.png" alt="Hollow Knight boss fight">
+        <figcaption>That sense of victory after a tough boss fight is pure satisfaction.</figcaption>
+        <p><em>AI Prompt used: "Create a dramatic battle scene in the style of a fantasy boss fight."</em></p>
+      </figure>
+    </section>
+
+    <!-- === AI PROMPTS SECTION === -->
+    <section id="ai">
+      <h2>AI Prompts</h2>
+      <p>I used AI for generating stylized images and concept ideas only. All text and code were written by me.</p>
+      <ul>
+        <li>"Create a hand-drawn game poster inspired by Hollow Knight with glowing caverns."</li>
+        <li>"Generate an illustration of a climber ascending a mystical mountain under pixel-art stars."</li>
+        <li>"Draw a cozy autumn farm scene inspired by Stardew Valley."</li>
+        <li>"Illustrate a peaceful outdoor gaming setup under soft lighting."</li>
+        <li>"Design a glowing, bug-themed fantasy setting inspired by Silksong."</li>
+        <li>"Create a dramatic battle scene in the style of a fantasy boss fight."</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <nav>
+      <a href="https://webpages.charlotte.edu/mkowae/">Charlotte.edu</a><span class="divider">✦</span>
+      <a href="https://github.com/Mksurfing">GitHub</a><span class="divider">✦</span>
+      <a href="https://github.com/Mksurfing/Mksurfing.github.io">GitHub.io</a><span class="divider">✦</span>
+      <a href="https://www.freecodecamp.org/mkowae">freeCodeCamp</a><span class="divider">✦</span>
+      <a href="https://www.codecademy.com/profiles/Mkowae">Codecademy</a><span class="divider">✦</span>
+      <a href="https://www.linkedin.com/in/marc-kowae-92b621380/">LinkedIn</a>
+    </nav>
+    <div class="validators">
+      <a href="https://validator.w3.org/check?uri=referer"><img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML!" /></a>
+      <a href="https://jigsaw.w3.org/css-validator/check/referer"><img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" /></a>
+      <a href="https://wave.webaim.org/"><img src="https://wave.webaim.org/img/waveicon.png" alt="WAVE Accessibility Checker" /></a>
+    </div>
+    <p>Page built by <a href="kowaeenterprises.net/index.html">Kowae Enterprises</a> &copy; 2025</p>
+  </footer>
+</body>
+</html>
