@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Code Editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>HTML Code Editor</h1>
+    <nav>
+      <a href="project_index.html">Home</a>
+      <a href="project_basics.html">HTML Basics</a>
+      <a href="project_editor.html">Code Editor</a>
+      <a href="project_quiz.html">Quiz</a>
+      <a href="project_resources.html">Resources</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Try HTML</h2>
+
+    <textarea id="code" rows="10" cols="50">
+<h1>Hello World</h1>
+<p>This is my first page.</p>
+    </textarea>
+
+    <br><br>
+    <button onclick="runCode()">Run Code</button>
+
+    <h3>Output:</h3>
+    <iframe id="output"></iframe>
+  </main>
+
+  <footer>
+    <p>© 2026 Learn HTML</p>
+  </footer>
+
+  <script>
+    function runCode() {
+      let code = document.getElementById("code").value;
+      let iframe = document.getElementById("output").contentWindow.document;
+      iframe.open();
+      iframe.write(code);
+      iframe.close();
+    }
+  </script>
+</body>
+</html>

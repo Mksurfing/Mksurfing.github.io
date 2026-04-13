@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>HTML Quiz</h1>
+    <nav>
+      <a href="project_index.html">Home</a>
+      <a href="project_basics.html">HTML Basics</a>
+      <a href="project_editor.html">Code Editor</a>
+      <a href="project_quiz.html">Quiz</a>
+      <a href="project_resources.html">Resources</a>
+    </nav>
+  </header>
+
+  <main>
+    <form id="quizForm">
+      <p>1. What does HTML stand for?</p>
+      <label>
+        <input type="radio" name="q1" value="a">
+        Hyper Text Markup Language
+      </label><br>
+
+      <label>
+        <input type="radio" name="q1" value="b">
+        Home Tool Markup Language
+      </label>
+
+      <p>2. Which tag is for paragraphs?</p>
+      <label>
+        <input type="radio" name="q2" value="a">
+        &lt;p&gt;
+      </label><br>
+
+      <label>
+        <input type="radio" name="q2" value="b">
+        &lt;h1&gt;
+      </label>
+
+      <br><br>
+      <button type="button" onclick="gradeQuiz()">Submit</button>
+    </form>
+
+    <p id="result"></p>
+  </main>
+
+  <footer>
+    <p>© 2026 Learn HTML</p>
+  </footer>
+
+  <script>
+    function gradeQuiz() {
+      let score = 0;
+
+      let q1 = document.querySelector('input[name="q1"]:checked');
+      let q2 = document.querySelector('input[name="q2"]:checked');
+
+      if (!q1 || !q2) {
+        alert("Please answer all questions!");
+        return;
+      }
+
+      if (q1.value === "a") score++;
+      if (q2.value === "a") score++;
+
+      document.getElementById("result").innerText = "Score: " + score + "/2";
+    }
+  </script>
+</body>
+</html>

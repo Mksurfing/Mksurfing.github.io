@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Basics</title>
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+  <script>
+    $(function () {
+      $("#accordion").accordion();
+    });
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1>HTML Basics</h1>
+    <nav>
+      <a href="project_index.html">Home</a>
+      <a href="project_basics.html">HTML Basics</a>
+      <a href="project_editor.html">Code Editor</a>
+      <a href="project_quiz.html">Quiz</a>
+      <a href="project_resources.html">Resources</a>
+    </nav>
+  </header>
+
+  <main>
+    <div id="accordion">
+      <h3>What is HTML?</h3>
+      <div>
+        <p>HTML is the standard language for creating web pages.</p>
+      </div>
+
+      <h3>Basic Structure</h3>
+      <div>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+  Hello World
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+      </div>
+
+      <h3>Common Tags</h3>
+      <div>
+        <p>&lt;h1&gt;, &lt;p&gt;, &lt;a&gt;, &lt;img&gt;</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Learn HTML</p>
+  </footer>
+</body>
+</html>
