@@ -1,0 +1,107 @@
+/* Row backgrounds (fishing inventory theme) */
+tr[class="in-stock"] {
+background-image: linear-gradient(to right, #d4f1f9, #ffffff);
+}
+
+tr[class="low-stock"] {
+background-image: linear-gradient(to right, #fff3cd, #ffffff);
+}
+
+tr[class="out-stock"] {
+background-image: linear-gradient(to right, #f8d7da, #ffffff);
+}
+
+/* Status styling */
+tr[class="in-stock"] span[class="status"] {
+border: 2px solid green;
+background-image: linear-gradient(to right, #c3e6cb, #fff);
+}
+
+tr[class="low-stock"] span[class="status"] {
+border: 2px solid orange;
+background-image: linear-gradient(to right, #ffeeba, #fff);
+}
+
+tr[class="out-stock"] span[class="status"] {
+border: 2px solid red;
+background-image: linear-gradient(to right, #f5c6cb, #fff);
+}
+
+/* General span styling */
+span {
+display: inline-block;
+}
+
+/* Status + rating sizing */
+span[class="status"],
+span[class^="rate"] {
+height: 25px;
+width: 110px;
+padding: 4px;
+text-align: center;
+}
+
+/* Rating circles */
+span[class^="rate"] > span {
+border: 1px solid #333;
+border-radius: 50%;
+margin: 2px;
+height: 15px;
+width: 15px;
+background-color: #ddd;
+}
+
+/* ONE */
+span[class~="one"] span:nth-child(1) {
+background-image: linear-gradient(to top, gold, orange);
+}
+
+/* TWO */
+span[class~="two"] span:nth-child(1),
+span[class~="two"] span:nth-child(2) {
+background-image: linear-gradient(to top, gold, orange);
+}
+
+/* THREE */
+span[class~="three"] span {
+background-image: linear-gradient(to top, gold, orange);
+}
+body{
+    background-color: rgb(247, 173, 146);
+    text-align: center;
+    color: darkblue;
+    font-family:'Franklin Gothic Medium';
+}
+
+a {
+    color:blueviolet;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(235, 55, 0);
+}
+
+main {
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
+
+}
+
+h2{
+    text-align: center;
+}
+
+img{
+    max-width: 45%;
+    width: 50%;
+}
+figure{
+    text-align: center;
+    font-style: italic;
+}
+
+.slogan{
+    font-style: italic;
+}

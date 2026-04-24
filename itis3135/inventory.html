@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kingfisher Tackle Inventory</title>
+    <link rel="stylesheet" href="styles/inventory.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header>
+    <div data-include="components/header.html"></div>
+</header>
+
+<main>
+
+<h1 style="text-align:center;">Kingfisher Tackle Inventory</h1>
+
+<table style="width:90%; margin:auto; border-collapse:collapse;">
+
+<thead>
+    <tr>
+        <th>Gear</th>
+        <th>Brand</th>
+        <th>Type</th>
+        <th>Status</th>
+        <th>Quality</th>
+    </tr>
+</thead>
+
+<tbody>
+
+    <tr class="in-stock">
+        <td>Kingfisher Pro Rod</td>
+        <td>AquaStrike</td>
+        <td>Rod</td>
+        <td><span class="status">In Stock</span></td>
+        <td>
+            <span class="rate three">
+                <span></span><span></span><span></span>
+            </span>
+        </td>
+    </tr>
+
+    <tr class="low-stock">
+        <td>River Runner Reel</td>
+        <td>BlueCurrent</td>
+        <td>Reel</td>
+        <td><span class="status">Low Stock</span></td>
+        <td>
+            <span class="rate two">
+                <span></span><span></span><span></span>
+            </span>
+        </td>
+    </tr>
+
+    <tr class="out-stock">
+        <td>Feather Lure Pack</td>
+        <td>Kingfisher Gear Co.</td>
+        <td>Lures</td>
+        <td><span class="status">Out of Stock</span></td>
+        <td>
+            <span class="rate one">
+                <span></span><span></span><span></span>
+            </span>
+        </td>
+    </tr>
+
+    <tr class="in-stock">
+        <td>Deep Water Net</td>
+        <td>RiverPro</td>
+        <td>Net</td>
+        <td><span class="status">In Stock</span></td>
+        <td>
+            <span class="rate two">
+                <span></span><span></span><span></span>
+            </span>
+        </td>
+    </tr>
+
+</tbody>
+
+</table>
+
+</main>
+
+<footer>
+    <div data-include="components/footer.html"></div>
+</footer>
+
+<script src="scripts/htmlinclude.min.js"></script>
+
+</body>
+</html>
