@@ -1,99 +1,128 @@
-/* RESET */
+
+/* =========================
+   GLOBAL KINGFISHER THEME
+   ========================= */
+
 body {
-margin: 0;
-font-family: Arial, sans-serif;
-background-color: #f0fbff;
-color: #0b3d2e;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium';
+    background-color: rgb(247, 173, 146);
+    color: darkblue;
 }
 
-/* HEADER */
-#header {
-position: fixed;
-top: 0;
-width: 100%;
-background-color: #d4f1f9;
-display: flex;
-justify-content: space-between;
-align-items: center;
-/* padding: 10px 20px; */
-border-bottom: 2px solid #0b3d2e;
-z-index: 1000;
+/* HEADER + FOOTER */
+header,
+footer {
+    background-color: rgb(247, 173, 146);
+    text-align: center;
+    padding: 15px;
+    border-bottom: 2px solid darkblue;
 }
 
-/* LOGO */
-#header-img {
-height: 50px;
+footer {
+    border-top: 2px solid darkblue;
+    border-bottom: none;
+    margin-top: 40px;
 }
 
-/* NAVIGATION */
-#nav-bar {
-display: flex;
-gap: 15px;
+/* =========================
+   MAIN LAYOUT (FIXED CENTERING)
+   ========================= */
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+
+    /* FIX: consistent centering */
+    text-align: center;
 }
 
-.nav-link {
-text-decoration: none;
-color: #0b3d2e;
-font-weight: bold;
-}
-
-.nav-link:hover {
-text-decoration: underline;
-}
-
-/* SPACING FOR FIXED HEADER */
+/* Section spacing */
 section {
-padding: 90px 20px 40px;
-max-width: 900px;
-margin: auto;
+    margin-bottom: 40px;
 }
 
-/* HEADINGS */
+/* FIX: readable centered text */
+section p,
+section ul {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* clean list style */
+ul {
+    list-style-position: inside;
+    padding: 0;
+}
+
+/* =========================
+   HEADINGS
+   ========================= */
+
 h2 {
-color: #0b3d2e;
+    text-align: center;
 }
 
-/* VIDEO */
+/* =========================
+   LINKS
+   ========================= */
+
+a {
+    color: blueviolet;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(235, 55, 0);
+}
+
+/* =========================
+   VIDEO SECTION
+   ========================= */
+
 #video {
-max-width: 100%;
-border: 3px solid #0b3d2e;
+    max-width: 100%;
+    border: 3px solid darkblue;
 }
 
-/* FORM */
+/* =========================
+   FORM STYLING
+   ========================= */
+
 form {
-display: flex;
-flex-direction: column;
-max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 #email {
-padding: 10px;
-margin-bottom: 10px;
-border: 1px solid #0b3d2e;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid darkblue;
 }
 
 #submit {
-padding: 10px;
-cursor: pointer;
-background-color: #0b3d2e;
-color: white;
-border: none;
+    padding: 10px;
+    cursor: pointer;
+    background-color: darkblue;
+    color: white;
+    border: none;
 }
 
 #submit:hover {
-background-color: #145c43;
+    background-color: rgb(235, 55, 0);
 }
-
-/* MOBILE */
-@media (max-width: 768px) {
-#header {
-flex-direction: column;
-align-items: flex-start;
+#video {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    border: 3px solid darkblue;
 }
-
-#nav-bar {
-flex-direction: column;
-gap: 10px;
+#header-img {
+    height: 50px;
+    width: auto;
+    display: block;
 }
-}
-

@@ -1,4 +1,62 @@
-/* Main container */
+/* =========================
+   GLOBAL RESET (IMPORTANT)
+   ========================= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(247, 173, 146);
+    text-align: center;
+    color: darkblue;
+    font-family: 'Franklin Gothic Medium';
+    margin: 0;
+}
+
+/* Links */
+a {
+    color: blueviolet;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(235, 55, 0);
+}
+
+/* Main layout */
+main {
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+/* Headings */
+h2 {
+    text-align: center;
+}
+
+/* Images (safe responsive rule) */
+img {
+    max-width: 45%;
+    height: auto;
+}
+
+/* Figures */
+figure {
+    text-align: center;
+    font-style: italic;
+}
+
+/* Slogan text */
+.slogan {
+    font-style: italic;
+}
+
+/* =========================
+   PLAYING CARDS PAGE
+   Fishing / Kingfisher theme
+   ========================= */
+
 #playing-cards {
     display: flex;
     justify-content: center;
@@ -7,21 +65,32 @@
     margin-top: 40px;
 }
 
-/* Each card */
+/* Each card (FIXED) */
 .card {
     display: flex;
     justify-content: space-between;
-    width: 130px;
-    height: 190px;
+
+    /* ❌ no fixed width at all */
+    flex: 0 0 130px;
+    min-height: 190px;
+
     padding: 10px;
     border: 2px solid #0b3d2e;
     border-radius: 12px;
+
     font-size: 18px;
 
-    /* 🎨 Fishing theme styling */
-    background: linear-gradient(to bottom, #d4f1f9, #75c9b7);
+    background: linear-gradient(to bottom, #cfefff, #75c9b7);
     color: #0b3d2e;
+
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+
+    transition: transform 0.2s ease;
+}
+
+/* hover stays simple */
+.card:hover {
+    transform: scale(1.05);
 }
 
 /* Left corner */
@@ -45,51 +114,5 @@
 .right {
     align-self: flex-end;
     font-weight: bold;
-    transform: rotate(180deg); /* Makes it look like real cards */
-}
-
-/* Optional hover effect (makes it feel interactive) */
-.card:hover {
-    transform: scale(1.05);
-    transition: 0.2s;
-}
-
-body{
-    background-color: rgb(247, 173, 146);
-    text-align: center;
-    color: darkblue;
-    font-family:'Franklin Gothic Medium';
-}
-
-a {
-    color:blueviolet;
-    text-decoration: none;
-}
-
-a:hover {
-    color: rgb(235, 55, 0);
-}
-
-main {
-    text-align: left;
-    margin-left: 20%;
-    margin-right: 20%;
-
-}
-
-h2{
-    text-align: center;
-}
-
-img{
-    max-width: 45%;
-    width: 50%;
-}
-figure{
-    text-align: center;
-    font-style: italic;
-}
-
-.slogan{
-    font-style: italic;
+    transform: rotate(180deg);
 }

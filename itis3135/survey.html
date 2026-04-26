@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kingfisher Fishing Survey</title>
+
+  <link rel="stylesheet" href="styles/survey.css" />
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header>
+  <div data-include="components/header.html"></div>
+</header>
+
+<main>
+
+  <h1 id="title">Kingfisher Fishing Survey 🐟</h1>
+  <p id="description" class="slogan">
+    Help the Kingfisher crew improve our fishing experience
+  </p>
+
+  <form id="survey-form" class="panel">
+
+    <label for="name">Name</label>
+    <input id="name" type="text" required placeholder="Enter your name" />
+
+    <label for="email">Email</label>
+    <input id="email" type="email" required placeholder="you@example.com" />
+
+    <label for="number">Age</label>
+    <input id="number" type="number" min="10" max="99" placeholder="10-99" />
+
+    <label for="dropdown">Favorite Fishing Style</label>
+    <select id="dropdown">
+      <option value="river">River Fishing</option>
+      <option value="sea">Sea Fishing</option>
+      <option value="lake">Lake Fishing</option>
+    </select>
+
+    <label>Experience Level</label>
+    <div class="options">
+      <input type="radio" name="experience" value="beginner"> Beginner
+      <input type="radio" name="experience" value="intermediate"> Intermediate
+      <input type="radio" name="experience" value="pro"> Pro Kingfisher
+    </div>
+
+    <label>Fishing Skills</label>
+    <div class="options">
+      <input type="checkbox" value="bait"> Bait Casting
+      <input type="checkbox" value="net"> Net Fishing
+      <input type="checkbox" value="fly"> Fly Fishing
+    </div>
+
+    <label for="comments">Notes from the River</label>
+    <textarea id="comments" rows="4" placeholder="Share your fishing thoughts..."></textarea>
+
+    <button id="submit" type="submit">Submit Catch Report</button>
+
+  </form>
+
+</main>
+
+<footer>
+  <div data-include="components/footer.html"></div>
+</footer>
+
+<script src="scripts/htmlinclude.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Franklin Gothic Medium";
+  background-color: rgb(247, 173, 146);
+  color: darkblue;
+  text-align: center;
+}
+
+/* panel */
+.panel {
+  background: rgba(255, 255, 255, 0.65);
+  border: 2px solid darkblue;
+  border-radius: 10px;
+
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+
+  text-align: left;
+}
+
+/* slogan */
+.slogan {
+  font-style: italic;
+  text-align: center;
+}
+
+/* labels */
+label {
+  display: block;
+  margin-top: 12px;
+}
+
+/* inputs (FIXED — NO width %) */
+input,
+select,
+textarea {
+  display: block;
+
+  margin: 6px auto;
+  padding: 8px;
+
+  border: 1px solid darkblue;
+
+  font-family: inherit;
+}
+
+/* options */
+.options {
+  margin-top: 5px;
+  text-align: left;
+}
+
+/* button */
+button {
+  display: block;
+  margin: 15px auto;
+
+  padding: 10px;
+
+  border: 1px solid darkblue;
+  background: white;
+
+  cursor: pointer;
+  font-family: inherit;
+}
+
+button:hover {
+  background: rgb(235, 55, 0);
+  color: white;
+}

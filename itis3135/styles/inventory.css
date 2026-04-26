@@ -1,80 +1,19 @@
-/* Row backgrounds (fishing inventory theme) */
-tr[class="in-stock"] {
-background-image: linear-gradient(to right, #d4f1f9, #ffffff);
-}
 
-tr[class="low-stock"] {
-background-image: linear-gradient(to right, #fff3cd, #ffffff);
-}
+/* =========================
+   GLOBAL SITE THEME
+   Kingfisher Fishing Brand
+   ========================= */
 
-tr[class="out-stock"] {
-background-image: linear-gradient(to right, #f8d7da, #ffffff);
-}
-
-/* Status styling */
-tr[class="in-stock"] span[class="status"] {
-border: 2px solid green;
-background-image: linear-gradient(to right, #c3e6cb, #fff);
-}
-
-tr[class="low-stock"] span[class="status"] {
-border: 2px solid orange;
-background-image: linear-gradient(to right, #ffeeba, #fff);
-}
-
-tr[class="out-stock"] span[class="status"] {
-border: 2px solid red;
-background-image: linear-gradient(to right, #f5c6cb, #fff);
-}
-
-/* General span styling */
-span {
-display: inline-block;
-}
-
-/* Status + rating sizing */
-span[class="status"],
-span[class^="rate"] {
-height: 25px;
-width: 110px;
-padding: 4px;
-text-align: center;
-}
-
-/* Rating circles */
-span[class^="rate"] > span {
-border: 1px solid #333;
-border-radius: 50%;
-margin: 2px;
-height: 15px;
-width: 15px;
-background-color: #ddd;
-}
-
-/* ONE */
-span[class~="one"] span:nth-child(1) {
-background-image: linear-gradient(to top, gold, orange);
-}
-
-/* TWO */
-span[class~="two"] span:nth-child(1),
-span[class~="two"] span:nth-child(2) {
-background-image: linear-gradient(to top, gold, orange);
-}
-
-/* THREE */
-span[class~="three"] span {
-background-image: linear-gradient(to top, gold, orange);
-}
-body{
+body {
     background-color: rgb(247, 173, 146);
     text-align: center;
     color: darkblue;
-    font-family:'Franklin Gothic Medium';
+    font-family: 'Franklin Gothic Medium';
+    margin: 0;
 }
 
 a {
-    color:blueviolet;
+    color: blueviolet;
     text-decoration: none;
 }
 
@@ -86,22 +25,112 @@ main {
     text-align: left;
     margin-left: 20%;
     margin-right: 20%;
-
 }
 
-h2{
+h2 {
     text-align: center;
 }
 
-img{
+img {
     max-width: 45%;
-    width: 50%;
+    height: auto;
 }
-figure{
+
+figure {
     text-align: center;
     font-style: italic;
 }
 
-.slogan{
+.slogan {
     font-style: italic;
+}
+
+/* =========================
+   INVENTORY ROW THEMES
+   Fishing / Kingfisher palette
+   ========================= */
+
+tr.in-stock {
+    background-image: linear-gradient(to right, #d4f1f9, #eafff5);
+}
+
+tr.low-stock {
+    background-image: linear-gradient(to right, #fff3cd, #ffffff);
+}
+
+tr.out-stock {
+    background-image: linear-gradient(to right, #f8d7da, #ffffff);
+}
+
+/* =========================
+   STATUS BOXES (SAFE)
+   ========================= */
+
+tr.in-stock .status {
+    border: 2px solid green;
+    background-image: linear-gradient(to right, #c3e6cb, #ffffff);
+}
+
+tr.low-stock .status {
+    border: 2px solid orange;
+    background-image: linear-gradient(to right, #ffeeba, #ffffff);
+}
+
+tr.out-stock .status {
+    border: 2px solid red;
+    background-image: linear-gradient(to right, #f5c6cb, #ffffff);
+}
+
+/* =========================
+   STATUS + RATING BASE
+   ========================= */
+
+.status,
+.rate {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 25px;
+    min-width: 110px;
+}
+
+/* =========================
+   RATING DOTS
+   ========================= */
+
+
+
+.rate > span {
+    border: 1px solid #333;
+    border-radius: 50%;
+
+    margin: 2px;
+    padding: 6px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #ddd;
+}
+
+/* =========================
+   RATING STATES
+   ========================= */
+
+/* ONE */
+.rate-one > span:nth-child(1) {
+    background-image: linear-gradient(to top, gold, orange);
+}
+
+/* TWO */
+.rate-two > span:nth-child(1),
+.rate-two > span:nth-child(2) {
+    background-image: linear-gradient(to top, gold, orange);
+}
+
+/* THREE */
+.rate-three > span {
+    background-image: linear-gradient(to top, gold, orange);
 }
