@@ -1,0 +1,66 @@
+body {
+  background-color: rgb(247, 173, 146);
+  text-align: center;
+  color: darkblue;
+  font-family: 'Franklin Gothic Medium';
+}
+
+/* App container styled like a “deck panel” */
+.app {
+  background: rgba(255, 255, 255, 0.6);
+  border: 2px solid darkblue;
+  border-radius: 10px;
+  width: 320px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Keep headings consistent with your site */
+h1 {
+  text-align: center;
+  color: darkblue;
+}
+
+h2 {
+  text-align: center;
+}
+
+/* Select + button match site feel */
+select, button {
+  font-family: 'Franklin Gothic Medium';
+  color: darkblue;
+  background: white;
+  border: 1px solid darkblue;
+  padding: 8px;
+  margin: 8px 0;
+  width: 100%;
+}
+
+/* Button hover uses your link hover color */
+button:hover {
+  background-color: rgb(235, 55, 0);
+  color: white;
+  cursor: pointer;
+}
+
+/* Weather output block */
+#weather-container {
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* Icon sizing consistent with your img rule */
+#weather-icon {
+  max-width: 45%;
+  width: 50%;
+}
+
+/* Text spacing for readability */
+#weather-container p {
+  margin: 5px 0;
+}
+
+/* Location styling */
+#location {
+  font-style: italic;
+}
