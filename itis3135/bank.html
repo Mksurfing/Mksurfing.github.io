@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kingfisher Fishing Bank</title>
+
+  <link rel="stylesheet" href="styles/bank.css">
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header>
+  <div data-include="components/header.html"></div>
+</header>
+
+<main>
+
+  <h1>Kingfisher Fishing Bank 🐟</h1>
+  <p class="slogan">Track your fishing credits with the kingfisher ledger</p>
+
+  <section class="panel">
+
+    <h2>Fishing Account</h2>
+
+    <input id="amount" type="number" placeholder="Enter amount..." />
+
+    <div class="buttons">
+      <button id="deposit-btn">Deposit Catch</button>
+      <button id="withdraw-btn">Withdraw Catch</button>
+      <button id="balance-btn">Check Balance</button>
+    </div>
+
+    <div class="buttons">
+      <button id="deposits-btn">List Deposits</button>
+      <button id="withdrawals-btn">List Withdrawals</button>
+    </div>
+
+    <p id="output"></p>
+
+  </section>
+
+</main>
+
+<footer>
+  <div data-include="components/footer.html"></div>
+</footer>
+
+<script src="scripts/bank.js"></script>
+<script src="scripts/htmlinclude.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Franklin Gothic Medium";
+  background-color: rgb(247, 173, 146);
+  color: darkblue;
+  text-align: center;
+}
+
+#vote-page {
+  padding: 20px;
+}
+
+.slogan {
+  font-style: italic;
+}
+
+.poll-box {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.65);
+  border: 2px solid darkblue;
+  border-radius: 10px;
+
+  padding: 20px;
+  max-width: 500px;
+}
+
+/* LABELS */
+label {
+  display: block;
+  margin-top: 10px;
+  text-align: left;
+}
+
+/* ✅ FIX: NO width:100% (Accumulus-safe method) */
+input,
+select {
+  display: block;
+  width: auto;
+  min-width: 250px;
+
+  padding: 8px;
+  margin-top: 4px;
+
+  border: 1px solid darkblue;
+  font-family: inherit;
+}
+
+/* BUTTONS */
+button {
+  display: block;
+  width: auto;
+  min-width: 250px;
+
+  padding: 10px;
+  margin-top: 10px;
+
+  background: orange;
+  border: none;
+  border-radius: 5px;
+
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgb(235, 55, 0);
+  color: white;
+}
+
+/* OUTPUT BOXES */
+#results,
+#add-message,
+#vote-message {
+  margin-top: 10px;
+  padding: 10px;
+
+  background: darkblue;
+  color: white;
+
+  border-radius: 5px;
+  white-space: pre-line;
+}

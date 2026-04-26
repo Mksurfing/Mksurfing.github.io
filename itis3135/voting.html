@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kingfisher Fishing Co. | Voting Station</title>
+
+  <link rel="stylesheet" href="styles/voting.css">
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <header>
+    <div data-include="components/header.html"></div>
+  </header>
+
+  <main id="vote-page">
+
+    <h1>Kingfisher Fishing Co. Voting Station</h1>
+    <p class="slogan">“Every catch starts with a smart vote.” 🐟</p>
+
+    <section class="poll-box">
+
+      <!-- ADD OPTION -->
+      <h2>Create Fishing Option</h2>
+
+      <label for="option-input">New fishing option</label>
+      <input id="option-input" type="text" placeholder="e.g. Deep Sea Trip">
+
+      <button id="add-btn" type="button">Add Option</button>
+      <div id="add-message"></div>
+
+      <hr>
+
+      <!-- VOTE -->
+      <h2>Cast Your Vote</h2>
+
+      <label for="voter-id">Fisher ID</label>
+      <input id="voter-id" type="text" placeholder="e.g. fisher123">
+
+      <label for="option-select">Available Options</label>
+      <select id="option-select">
+        <option value="">Choose a fishing option</option>
+      </select>
+
+      <button id="vote-btn" type="button">Cast Vote</button>
+      <div id="vote-message"></div>
+
+      <hr>
+
+      <!-- RESULTS -->
+      <h2>Fishing Results</h2>
+
+      <button id="results-btn" type="button">Show Results</button>
+      <div id="results"></div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <div data-include="components/footer.html"></div>
+  </footer>
+
+  <script src="scripts/voting.js"></script>
+  <script src="scripts/htmlinclude.min.js"></script>
+
+</body>
+</html>

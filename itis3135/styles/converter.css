@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(247, 173, 146);
+    text-align: center;
+    color: darkblue;
+    font-family: "Franklin Gothic Medium";
+    margin: 0;
+}
+
+/* layout */
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+/* panels */
+.panel {
+    background: rgba(255, 255, 255, 0.6);
+    border: 2px solid darkblue;
+    border-radius: 10px;
+
+    padding: 15px;
+
+    flex: 1 1 280px;
+    max-width: 320px;
+}
+
+/* input (FIX: no height) */
+#markdown-input {
+    padding: 8px;
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* outputs (NO width, NO max-width, NO conflicts) */
+#html-output,
+#preview {
+    padding: 10px;
+    border: 1px solid darkblue;
+    background: #f9f9f9;
+    text-align: left;
+
+    min-height: 120px;
+}
+/* headings */
+h2, h3 {
+    text-align: center;
+}
+.panel {
+    flex: 1 1 250px;
+}
+/* images */
+img {
+    max-width: 45%;
+    height: auto;
+}
+
+/* links */
+a {
+    color: blueviolet;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(235, 55, 0);
+}
+
+/* slogan */
+.slogan {
+    font-style: italic;
+}

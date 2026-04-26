@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kingfisher Fishing Co. | Field Report Converter</title>
+
+    <link rel="stylesheet" href="styles/converter.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+
+    <main>
+        <h2>Field Report Converter</h2>
+        <p class="slogan">Kingfisher Fishing Co. — turning river notes into clean catch logs</p>
+
+        <div id="container">
+
+            <div class="panel">
+                <h3>🎣 Field Notes (Markdown)</h3>
+                <textarea id="markdown-input"
+                    placeholder="Write fishing notes... e.g. # Catch Report, **big trout**, [gear](url)"></textarea>
+            </div>
+
+            <div class="panel">
+                <h3>📄 Raw Catch Log (HTML)</h3>
+                <div id="html-output"></div>
+            </div>
+
+            <div class="panel">
+                <h3>🐟 Kingfisher Report Board</h3>
+                <div id="preview"></div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+
+    <script src="scripts/converter.js"></script>
+    <script src="scripts/htmlinclude.min.js"></script>
+
+</body>
+
+</html>

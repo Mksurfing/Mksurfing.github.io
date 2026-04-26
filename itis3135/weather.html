@@ -10,40 +10,44 @@
 
   
   <body>
-    <header>
-        <div data-include="components/header.html"></div>
-    </header>
-    <div class="app">
-      <h1>Weather Checker</h1>
+  <header>
+    <div data-include="components/header.html"></div>
+  </header>
 
-      <select id="city-select">
-        <option value=""></option>
-        <option value="new york">New York</option>
-        <option value="los angeles">Los Angeles</option>
-        <option value="chicago">Chicago</option>
-        <option value="paris">Paris</option>
-        <option value="tokyo">Tokyo</option>
-        <option value="london">London</option>
-      </select>
+  <main class="app">
+    <h1>Weather Checker</h1>
 
-      <button id="get-weather-btn">Get Weather</button>
+    <select id="city-select">
+      <option value="" disabled selected>Select a city</option>
+      <option value="new york">New York</option>
+      <option value="los angeles">Los Angeles</option>
+      <option value="chicago">Chicago</option>
+      <option value="paris">Paris</option>
+      <option value="tokyo">Tokyo</option>
+      <option value="london">London</option>
+    </select>
 
-      <div id="weather-container">
-        <h2 id="location"></h2>
-        <p id="weather-main"></p>
-        <img id="weather-icon" />
+    <button id="get-weather-btn">Get Weather</button>
 
-        <p id="main-temperature"></p>
-        <p id="feels-like"></p>
-        <p id="humidity"></p>
-        <p id="wind"></p>
-        <p id="wind-gust"></p>
-      </div>
+    <div id="weather-container">
+      <p id="location">Select a city</p>
+      <p id="weather-main"></p>
+
+      <img id="weather-icon" src="images/weathericon.webp" alt="Weather icon" />
+
+      <p id="main-temperature"></p>
+      <p id="feels-like"></p>
+      <p id="humidity"></p>
+      <p id="wind"></p>
+      <p id="wind-gust"></p>
     </div>
-    <footer>
-        <div data-include="components/footer.html"></div>
-    </footer>
-    <script src="scripts/weather.js"></script>
-    <script src="scripts/htmlinclude.min.js"></script>
-  </body>
+  </main>
+
+  <footer>
+    <div data-include="components/footer.html"></div>
+  </footer>
+
+  <script src="scripts/htmlinclude.min.js"></script>
+  <script src="scripts/weather.js"></script>
+</body>
 </html>
