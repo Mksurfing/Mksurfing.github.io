@@ -1,127 +1,71 @@
-/* =========================
-GLOBAL STYLES
-========================= */
 
 body {
-margin: 0;
-font-family: Arial, sans-serif;
-background-color: #f0fbff;
-color: #0b3d2e;
+  margin: 0;
+  font-family: 'Franklin Gothic Medium';
+  background-color: rgb(247, 173, 146);
+  color: darkblue;
 }
 
-/* =========================
-HEADER / FOOTER
-========================= */
-
+/* HEADER + FOOTER */
 header,
 footer {
-    background-color: rgb(247, 173, 146);
-    padding: 15px;
-    text-align: center;
-    border-bottom: 2px solid #0b3d2e;
+  text-align: center;
+  padding: 15px;
 }
 
-footer {
-border-top: 2px solid #0b3d2e;
-border-bottom: none;
-margin-top: 40px;
-}
-
-
+/* MAIN CONTENT */
 #main-doc {
-padding: 20px;
-max-width: 900px;
-margin: 0 auto;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* Sections */
+/* SECTIONS */
 .main-section {
-margin-bottom: 40px;
-padding-bottom: 20px;
-border-bottom: 1px solid #cce5dd;
+  margin-bottom: 40px;
 }
 
-/* Section titles */
-.main-section header {
-font-size: 22px;
-margin-bottom: 10px;
-color: #0b3d2e;
+/* HEADINGS */
+h2 {
+  text-align: center;
 }
 
-/* =========================
-CODE BLOCKS
-========================= */
-
+/* CODE BLOCKS */
 code {
-display: block;
-background-color: #e6f7ff;
-padding: 8px;
-margin: 8px 0;
-border-left: 4px solid #0b3d2e;
-font-family: monospace;
+  display: block;
+  background-color: #e6f7ff;
+  padding: 8px;
+  margin: 8px 0;
+  border-left: 4px solid darkblue;
+  font-family: monospace;
 }
 
-/* =========================
-LISTS
-========================= */
-
-ul {
-padding-left: 20px;
-}
-
-/* =========================
-RESPONSIVE DESIGN
-========================= */
-
-@media (max-width: 768px) {
-#navbar {
-text-align: center;
-}
-
-.nav-link {
-padding: 10px;
-}
-
-#main-doc {
-padding: 15px;
-}
-}
-body{
-    background-color: rgb(247, 173, 146);
-    text-align: center;
-    color: darkblue;
-    font-family:'Franklin Gothic Medium';
-}
-
+/* LINKS (if used anywhere) */
 a {
-    color:blueviolet;
-    text-decoration: none;
+  color: blueviolet;
+  text-decoration: none;
 }
 
 a:hover {
-    color: rgb(235, 55, 0);
+  color: rgb(235, 55, 0);
 }
 
-main {
-    text-align: left;
-    margin-left: 20%;
-    margin-right: 20%;
 
+/* NAV BAR UNDER HEADER */
+#navbar {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 2px solid darkblue;
 }
 
-h2{
-    text-align: center;
+/* NAV LINKS */
+#navbar a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: darkblue;
+  font-weight: bold;
 }
 
-img{
-    max-width: 45%;
-    width: 50%;
-}
-figure{
-    text-align: center;
-    font-style: italic;
-}
-
-.slogan{
-    font-style: italic;
+#navbar a:hover {
+  color: rgb(235, 55, 0);
 }

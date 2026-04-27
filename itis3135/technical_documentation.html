@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Kingfisher Tackle Co. - Pro Rod</title>
+  <title>Kingfisher JavaScript Fishing Guide</title>
 
-  <link rel="stylesheet" href="styles/landing_page.css">
+  <link rel="stylesheet" href="styles/technical_documentation.css">
   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
@@ -15,56 +15,43 @@
   <div data-include="components/header.html"></div>
 </header>
 
-<main>
+<!-- NAVBAR RESTORED (UNDER HEADER) -->
+<nav id="navbar" aria-label="Kingfisher Navigation">
+  <a href="#Introduction">Introduction</a>
+  <a href="#Variables_and_Data_Types">Variables</a>
+  <a href="#Functions">Functions</a>
+  <a href="#Loops">Loops</a>
+  <a href="#DOM_Manipulation">DOM</a>
+</nav>
 
-  <section id="features">
-    <h2>Kingfisher Pro Rod Features</h2>
-    <p>Designed for precision casting, durability, and all-water performance.</p>
-    <ul>
-      <li>Lightweight carbon fiber build</li>
-      <li>All-weather durability</li>
-      <li>Enhanced casting distance</li>
-    </ul>
+<main id="main-doc">
+
+  <section class="main-section" id="Introduction">
+    <h2>Introduction</h2>
+    <p>JavaScript helps bring interactive life to Kingfisher fishing web tools.</p>
+    <p>It runs in the browser and controls dynamic behavior like casting data and updating UI.</p>
+    <code>console.log("Kingfisher Fishing Systems Ready");</code>
   </section>
 
-  <section id="video-section">
-    <h2>How It Works</h2>
-
-    <iframe
-      id="video"
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/9bZkp7q19f0"
-      title="Fishing Demo Video"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
-    </iframe>
-
+  <section class="main-section" id="Variables_and_Data_Types">
+    <h2>Variables and Data Types</h2>
+    <code>let rodType = "Kingfisher Pro Rod";</code>
+    <code>let fishCaught = 3;</code>
   </section>
 
-  <section id="pricing">
-    <h2>Pricing</h2>
-    <p><strong>Starter Rod:</strong> $49</p>
-    <p><strong>Pro Rod:</strong> $99</p>
-    <p><strong>Elite Kingfisher Bundle:</strong> $149</p>
+  <section class="main-section" id="Functions">
+    <h2>Functions</h2>
+    <code>function castLine() { return "Cast successful"; }</code>
   </section>
 
-  <section id="signup">
-    <h2>Join the Kingfisher Club</h2>
+  <section class="main-section" id="Loops">
+    <h2>Loops</h2>
+    <code>for(let i = 0; i &lt; 5; i++) { }</code>
+  </section>
 
-    <form id="form" action="https://www.freecodecamp.org/email-submit">
-      <input
-        id="email"
-        type="email"
-        name="email"
-        placeholder="Enter your email"
-        required>
-
-      <input
-        id="submit"
-        type="submit"
-        value="Get Updates">
-    </form>
-
+  <section class="main-section" id="DOM_Manipulation">
+    <h2>DOM Manipulation</h2>
+    <code>document.getElementById("fish");</code>
   </section>
 
 </main>
