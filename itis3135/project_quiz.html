@@ -3,7 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>Quiz</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/client.css">
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+    .question {
+      margin-bottom: 15px;
+    }
+    button {
+      margin-top: 10px;
+    }
+  </style>
 </head>
 
 <body>
@@ -19,57 +33,109 @@
   </header>
 
   <main>
-    <form id="quizForm">
-      <p>1. What does HTML stand for?</p>
-      <label>
-        <input type="radio" name="q1" value="a">
-        Hyper Text Markup Language
-      </label><br>
+    <h1>HTML Basics Quiz</h1>
 
-      <label>
-        <input type="radio" name="q1" value="b">
-        Home Tool Markup Language
-      </label>
+    <div id="quiz"></div>
 
-      <p>2. Which tag is for paragraphs?</p>
-      <label>
-        <input type="radio" name="q2" value="a">
-        &lt;p&gt;
-      </label><br>
+    <button onclick="submitQuiz()">Submit Quiz</button>
 
-      <label>
-        <input type="radio" name="q2" value="b">
-        &lt;h1&gt;
-      </label>
-
-      <br><br>
-      <button type="button" onclick="gradeQuiz()">Submit</button>
-    </form>
-
-    <p id="result"></p>
+    <h2 id="result">Your score will appear here</h2>
   </main>
 
-  <footer>
-    <p>© 2026 Learn HTML</p>
-  </footer>
-
   <script>
-    function gradeQuiz() {
-      let score = 0;
+    document.addEventListener("DOMContentLoaded", function () {
 
-      let q1 = document.querySelector('input[name="q1"]:checked');
-      let q2 = document.querySelector('input[name="q2"]:checked');
+      const quizData = [
+        {
+          question: "What does HTML stand for?",
+          options: [
+            "Hyper Trainer Marking Language",
+            "HyperText Markup Language",
+            "HighText Machine Language"
+          ],
+          answer: 1
+        },
+        {
+          question: "Which tag is used for the largest heading?",
+          options: ["&lt;h6&gt;", "&lt;h1&gt;", "&lt;head&gt;"],
+          answer: 1
+        },
+        {
+          question: "Where does visible content go?",
+          options: ["&lt;head&gt;", "&lt;body&gt;", "&lt;html&gt;"],
+          answer: 1
+        },
+        {
+          question: "Which tag creates a link?",
+          options: ["&lt;a&gt;", "&lt;p&gt;", "&lt;img&gt;"],
+          answer: 0
+        },
+        {
+          question: "Which tag is used to display an image?",
+          options: ["&lt;img&gt;", "&lt;image&gt;", "&lt;src&gt;"],
+          answer: 0
+        },
+        {
+          question: "What tag creates a paragraph?",
+          options: ["&lt;para&gt;", "&lt;p&gt;", "&lt;text&gt;"],
+          answer: 1
+        },
+        {
+          question: "Which tag makes a line break?",
+          options: ["&lt;lb&gt;", "&lt;br&gt;", "&lt;break&gt;"],
+          answer: 1
+        },
+        {
+          question: "What is &lt;div&gt; used for?",
+          options: [
+            "Creating images",
+            "Grouping content",
+            "Making links"
+          ],
+          answer: 1
+        }
+      ];
 
-      if (!q1 || !q2) {
-        alert("Please answer all questions!");
-        return;
+      const quizContainer = document.getElementById("quiz");
+
+      function loadQuiz() {
+        quizData.forEach((q, index) => {
+          const div = document.createElement("div");
+          div.classList.add("question");
+
+          let html = `<p>${index + 1}. ${q.question}</p>`;
+
+          q.options.forEach((option, i) => {
+            html += `
+              <label>
+                <input type="radio" name="q${index}" value="${i}">
+                ${option}
+              </label><br>
+            `;
+          });
+
+          div.innerHTML = html;
+          quizContainer.appendChild(div);
+        });
       }
 
-      if (q1.value === "a") score++;
-      if (q2.value === "a") score++;
+      window.submitQuiz = function () {
+        let score = 0;
 
-      document.getElementById("result").innerText = "Score: " + score + "/2";
-    }
+        quizData.forEach((q, index) => {
+          const answer = document.querySelector(`input[name="q${index}"]:checked`);
+          if (answer && parseInt(answer.value) === q.answer) {
+            score++;
+          }
+        });
+
+        document.getElementById("result").innerText =
+          `You got ${score} out of ${quizData.length} correct!`;
+      };
+
+      loadQuiz();
+    });
   </script>
+
 </body>
 </html>

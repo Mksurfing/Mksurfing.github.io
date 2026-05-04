@@ -1,0 +1,219 @@
+
+/* =========================
+   RESET / BASE
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b0f14;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+/* =========================
+   FOCUS ACCESSIBILITY
+========================= */
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 3px solid #60a5fa;
+  outline-offset: 3px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  background: #111827;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #1f2937;
+}
+
+/* NAVIGATION */
+nav a {
+  color: #cbd5e1;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #ffffff;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+main {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* =========================
+   HEADINGS (FIXED: ONLY ONCE, NO CONFLICTS)
+========================= */
+
+h1 {
+  color: #ffffff;
+  margin: 0 0 10px 0;
+}
+
+h2 {
+  color: #ffffff;
+  margin: 10px 0;
+}
+
+h3 {
+  color: #ffffff;
+  margin: 10px 0;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  background: #111827;
+  color: #9ca3af;
+  border-top: 1px solid #1f2937;
+}
+
+footer a {
+  color: #60a5fa;
+}
+
+/* =========================
+   QUIZ
+========================= */
+
+.question {
+  background: #111827;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #1f2937;
+}
+
+.question label {
+  display: block;
+  margin: 5px 0;
+}
+
+/* =========================
+   CODE EDITOR
+========================= */
+
+#code {
+  width: 100%;
+  max-width: 900px;
+  height: 220px;
+
+  background: #0f172a;
+  color: #ffffff;
+
+  border: 2px solid #1f2937;
+  padding: 10px;
+  border-radius: 6px;
+
+  font-family: monospace;
+
+  box-sizing: border-box;
+}
+
+#output {
+  width: 100%;
+  max-width: 900px;
+  height: 250px;
+
+  margin-top: 10px;
+
+  background: #000000;
+  border: 2px solid #1f2937;
+
+  box-sizing: border-box;
+}
+
+/* =========================
+   ACCORDION
+========================= */
+
+.ui-accordion .ui-accordion-header {
+  background: #111827;
+  color: #ffffff;
+  border: 1px solid #1f2937;
+}
+
+.ui-accordion .ui-accordion-content {
+  background: #0b0f14;
+  border: 1px solid #1f2937;
+  padding: 12px;
+}
+
+/* spacing cleanup */
+#accordion p,
+#accordion ul,
+#accordion pre {
+  margin: 6px 0;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+/* =========================
+   CODE BLOCKS
+========================= */
+
+pre {
+  background: #000000;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+/* =========================
+   GENERAL SAFETY
+========================= */
+
+textarea {
+  box-sizing: border-box;
+}
+#accordion p,
+#accordion li {
+  color: #f8fafc; /* brighter white for better readability */
+}

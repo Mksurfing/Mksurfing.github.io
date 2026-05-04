@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Code Editor</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/client.css">
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -21,16 +22,17 @@
   <main>
     <h2>Try HTML</h2>
 
-    <textarea id="code" rows="10" cols="50">
+    <label for="code">HTML Code Editor</label>
+<textarea id="code" rows="10" cols="50">
 <h1>Hello World</h1>
 <p>This is my first page.</p>
-    </textarea>
+</textarea>
 
     <br><br>
     <button onclick="runCode()">Run Code</button>
 
     <h3>Output:</h3>
-    <iframe id="output"></iframe>
+    <iframe id="output" title="HTML preview output"></iframe>
   </main>
 
   <footer>
@@ -39,12 +41,24 @@
 
   <script>
     function runCode() {
-      let code = document.getElementById("code").value;
-      let iframe = document.getElementById("output").contentWindow.document;
-      iframe.open();
-      iframe.write(code);
-      iframe.close();
-    }
+  let code = document.getElementById("code").value;
+  let iframe = document.getElementById("output").contentWindow.document;
+
+  iframe.open();
+  iframe.write(`
+    <html>
+      <body style="
+        background:#000;
+        color:#ffffff;
+        font-family:Arial;
+        padding:10px;
+      ">
+        ${code}
+      </body>
+    </html>
+  `);
+  iframe.close();
+}
   </script>
 </body>
 </html>
