@@ -217,3 +217,26 @@ textarea {
 #accordion li {
   color: #f8fafc; /* brighter white for better readability */
 }
+/* REMOVE spacing between accordion items */
+.ui-accordion .ui-accordion-header {
+  margin: 0;                 /* 🔥 kills header gaps */
+  border-radius: 0;          /* optional: cleaner stack */
+}
+
+/* remove double borders between sections */
+.ui-accordion .ui-accordion-header + .ui-accordion-content {
+  border-top: none;
+}
+
+/* tighten content spacing */
+.ui-accordion .ui-accordion-content {
+  margin: 0;
+  padding: 10px;
+}
+
+/* remove extra spacing inside */
+.ui-accordion p,
+.ui-accordion ul,
+.ui-accordion pre {
+  margin: 4px 0;
+}
